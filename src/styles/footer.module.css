@@ -1,0 +1,176 @@
+.footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+.footerTopsection {
+  display: flex;
+  gap: 20px;
+}
+
+.newsletterSection {
+  width: 50%;
+}
+
+.newsletterContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.emailInput {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 200px;
+}
+
+.subscribeBtn {
+  padding: 8px 12px;
+  background-color: transparent;
+  border-radius: 8px;
+  color: white;
+  border: 1px solid #555;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.contactCurrencySection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer p {
+  color: #555;
+  font-size: 13px;
+}
+
+.currencyOption {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footerMain {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.footerColumn h3,
+.footerColumn h4 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.footerLinks {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+
+.footerLinks li {
+  margin: 10px 0;
+}
+
+.footerLinks a {
+  text-decoration: none;
+  color: #555;
+}
+
+.footerLinks a:hover {
+  color: white;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 20px 0;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 5px;
+}
+
+.paymentMethods {
+  margin-top: 15px;
+}
+
+.paymentBanks {
+  display: flex;
+  gap: 5px;
+}
+
+.mobileView {
+  display: none;
+}
+
+.mobileChevron {
+  display: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.collapsibleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Collapsible links for mobile */
+.closed {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.open {
+  max-height: 500px; /* adjust as needed */
+  transition: max-height 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .footerTopsection {
+    flex-direction: column;
+  }
+
+  .newsletterSection {
+    width: 100%;
+  }
+
+  .mobileView {
+    display: block;
+  }
+
+  .hideMobileView {
+    display: none;
+  }
+
+  .footerLinks li {
+    margin: 6px 0;
+  }
+
+  .mobileChevron {
+    display: block;
+  }
+}

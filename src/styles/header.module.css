@@ -1,0 +1,181 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    
+    
+}
+
+
+.logoImg{
+     object-fit: contain;
+     height: 60px;
+     width: 60px;
+     
+    
+     
+     
+}
+.logoName{
+   
+    margin-left: 140px;
+}
+
+.headericon{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    
+}
+
+.icon{
+    height: 100%;
+    width: 35px;
+    color:#222;
+    cursor: pointer;
+    
+   
+}
+.Menuicon{
+    display: none;
+}
+
+.languageOption{
+    height: 100%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 2rem;
+    padding-right: 2px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+.subHeader{
+    display: block;
+    margin-top: 10px;
+    justify-items: center;
+    align-items: center;
+
+}
+.subHeaderItems{
+    display: flex;
+    gap:45px;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.subHeaderItems li{
+    list-style: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.optionValue{
+    background-color:transparent;
+    border: none;
+    outline: none;
+    
+}
+
+
+/* ====== Tablet (768px and below) ====== */
+@media (max-width: 768px) {
+  
+
+  .logoImg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logoName {
+    font-size: 2rem;
+    margin: 0%;
+  }
+
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .languageOption {
+    font-size: 1rem;
+  }
+
+  .subHeaderItems{
+    gap: 9px;
+  }
+  .subHeaderItems li{
+  
+    font-size:1rem;
+}
+
+
+
+}
+
+@media(max-width:600px){
+    .logoImg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .headericon{
+    gap: 5px;
+  }
+
+  .logoName{
+    font-size: 1.4rem;
+  }
+   .subHeaderItems li{
+  
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+
+}
+
+/* ====== Mobile (480px and below) ====== */
+@media (max-width: 480px) {
+    .Menuicon{
+        display: block;
+        height: 100%;
+        width: 35px;
+        color:#222;
+        cursor: pointer;
+
+    }
+    .showOnMobile{
+        display: flex;
+        gap: 1;
+    }
+
+    .hideOnMobile{
+        display: none;
+    }
+
+     .logoImg {
+    width: 40px;
+    height: 40px;
+    
+  }
+
+     .logoName{
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+   .icon {
+    width: 35px;
+    height: 35px;
+  }
+
+ 
+}

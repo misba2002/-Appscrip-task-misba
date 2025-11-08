@@ -1,0 +1,76 @@
+.sideFilterBar {
+  width: 200px;
+  margin-top: 30px;
+}
+
+.filterItem {
+  margin-bottom: 10px;
+}
+
+.filterHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: default;
+  padding: 5px;
+}
+
+.filterHeader span {
+  cursor: pointer;
+}
+
+.filterOptionsList {
+  list-style: none;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+.optionItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 3px 0;
+}
+
+.optionItem span {
+  text-transform: capitalize;
+}
+
+.optionItem svg {
+  margin-right: 5px;
+}
+
+/* Clear All button styling */
+.clearAll {
+  font-weight: 600;
+  color: #444;
+  text-decoration: underline; 
+  cursor: pointer;
+  gap: 0;
+}
+
+.clearAll:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .sideFilterBar {
+    width: 150px;
+  }
+}
+@media (max-width:600) {
+    .sideFilterBar{
+        width: 100px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+  .sideFilterBar {
+    display: none;
+  }
+}

@@ -1,0 +1,105 @@
+
+
+.heroSectionDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  gap: 20px;
+  margin: 20px auto 10px auto;
+   
+}
+
+.heroSectionDiv h1{
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.heroSectionDiv p{
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0%;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  text-wrap: wrap;
+  max-width: 400px;
+}
+
+.sectionDivider{
+  background-color:#777;
+  height: 1px;
+  width: 100vw;
+margin-left: -100px;
+  
+
+}
+.heroNavbar{
+  display: none;
+  gap: 10px;
+  list-style: none;
+  text-transform: uppercase;
+  margin: 20px auto 10px auto;
+  
+  
+}
+
+.heroNavbar .navItem{
+  font-size: 20px;
+ font-weight: 500;
+  line-height: 100%;
+  padding:0 5px;
+  letter-spacing: 0%;
+  cursor: pointer;
+
+}
+
+.heroNavbar .navItemHome{
+  color: #BFC8CD;
+  padding-right: 8px;
+  border-right: 2px solid #BFC8CD;
+}
+
+.heroNavbar .navItemShop{
+  color: #252020;
+  
+ 
+}
+
+
+
+
+@media (max-width: 480px) {
+  .sectionDivider{
+    margin-left: -20px;
+   
+  }
+  .heroSectionDiv{
+    width:342px ;
+    height: auto;
+    
+    
+  }
+
+  .heroSectionDiv p{
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0px;
+   
+  }
+   
+  .heroSectionDiv h1{
+    font-size: 24px;
+    letter-spacing: 0px;
+    line-height: 100%;
+  }
+
+  .heroNavbar{
+    display: flex;
+  }
+ 
+}
