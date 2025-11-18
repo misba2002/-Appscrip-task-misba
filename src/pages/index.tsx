@@ -31,11 +31,33 @@ export default function Home({ products }: HomeProps) {
   );
 }
 
-export async function getServerSideProps() {
-  const res = await fetch("https://fakestoreapi.com/products");
-  const products = await res.json();
 
-  return {
-    props: { products }, //send product data
-  };
+export async function getServerSideProps() {
+  try {
+    const res = await fetch("https://fakestoreapi.com/products");
+
+    // API returned non-200 → avoid crash
+    if (!res.ok) {
+      console.error("API Error:", res.status);
+      return { props: { products: [] } };
+    }
+
+    // Read response as text first
+    const text = await res.text();
+
+    let products: Product[] = [];
+
+    try {
+      products = JSON.parse(text);
+    } catch (err) {
+      console.error("Invalid JSON response:", text.substring(0, 200));
+      products = [];
+    }
+
+    return { props: { products } };
+
+  } catch (error) {
+    console.error("Fetch failed:", error);
+    return { props: { products: [] } }; // prevent SSR crash
+  }
 }
